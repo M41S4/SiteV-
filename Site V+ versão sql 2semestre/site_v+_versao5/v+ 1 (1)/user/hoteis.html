@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotéis</title>
+  <link rel="stylesheet" href="../css/style_hoteis.css" />
+</head>
+<body>
+  <div class="div_top_main">
+    <h1>Hotéis</h1>
+    <div id="div_top_info">
+      <form id="opcoes_hoteis">
+        <label for="destinos_value">Destino:</label>
+        <select name="destinos" id="destinos_value">
+          <option value="bahia">Bahia</option>
+          <option value="santa catarina">Santa Catarina</option>
+          <option value="parana">Paraná</option>
+          <option value="rio de janeiro">Rio de Janeiro</option>
+        </select>
+
+        <label for="CheckIn_Function">Check-In:</label>
+        <input type="date" id="CheckIn_Function" placeholder="Data de entrada" />
+
+        <label for="CheckOut_Function">Check-Out:</label>
+        <input type="date" id="CheckOut_Function" placeholder="Data de saída" />
+
+        <label for="quantidade_pessoas">Pessoas:</label>
+        <input type="number" id="quantidade_pessoas" placeholder="Ex: 2" />
+
+        <button type="submit" id="botao_enviar">Buscar</button>
+      </form>
+    </div>
+  </div>
+
+  <br /><br />
+  <center>
+    <div id="hotel_bahia" class="hotelinfo">
+      <p class="texto">Hotel Solar da Bahia</p>
+      <p>20/04 até 25/04 - até 2 pessoas</p>
+      <input type="button" value="Comprar" class="botao_comprar" />
+    </div>
+
+    <div id="hotel_sc" class="hotelinfo">
+      <p class="texto">Hotel Praia Sul</p>
+      <p>10/04 até 15/04 - até 4 pessoas</p>
+      <input type="button" value="Comprar" class="botao_comprar" />
+    </div>
+
+    <div id="hotel_pr" class="hotelinfo">
+      <p class="texto">Hotel Curitiba Lux</p>
+      <p>12/04 até 18/04 - até 3 pessoas</p>
+      <input type="button" value="Comprar" class="botao_comprar" />
+    </div>
+
+    <div id="hotel_rj" class="hotelinfo">
+      <p class="texto">Hotel Cataratas</p>
+      <p>14/04 até 20/04 - até 3 pessoas</p>
+      <input type="button" value="Comprar" class="botao_comprar" onclick="comprar()" />
+    </div>
+  </center>
+  <a href="index.html">← Voltar para a página inicial</a>
+
+  <script>
+    const formulario = document.getElementById("opcoes_hoteis");
+
+    const hoteis = [
+      {
+        destino: "bahia",
+        checkin: "2025-04-20",
+        checkout: "2025-04-25",
+        maxPessoas: 2,
+        div: document.getElementById("hotel_bahia"),
+      },
+      {
+        destino: "santa catarina",
+        checkin: "2025-04-10",
+        checkout: "2025-04-15",
+        maxPessoas: 4,
+        div: document.getElementById("hotel_sc"),
+      },
+      {
+        destino: "parana",
+        checkin: "2025-04-12",
+        checkout: "2025-04-18",
+        maxPessoas: 3,
+        div: document.getElementById("hotel_pr"),
+      },
+      {
+        destino: "rio de janeiro",
+        checkin: "2025-04-14",
+        checkout: "2025-04-20",
+        maxPessoas: 3,
+        div: document.getElementById("hotel_rj"),
+      },
+    ];
+
+    formulario.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const destino = document.getElementById("destinos_value").value.trim().toLowerCase();
+      const checkin = document.getElementById("CheckIn_Function").value;
+      const checkout = document.getElementById("CheckOut_Function").value;
+      const pessoas = parseInt(document.getElementById("quantidade_pessoas").value);
+
+
+      hoteis.forEach(hotel => hotel.div.style.display = "none");
+
+
+      const hotelEncontrado = hoteis.find(hotel =>
+        hotel.destino === destino &&
+        checkin >= hotel.checkin &&
+        checkout <= hotel.checkout &&
+        pessoas > 0 &&
+        pessoas <= hotel.maxPessoas
+      );
+
+
+      if (hotelEncontrado) {
+        hotelEncontrado.div.style.display = "block";
+      }
+    });
+
+    function comprar() {
+      window.location.href = 'finalizando.html';
+    }
+  </script>
+</body>
+</html>

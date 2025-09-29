@@ -1,0 +1,8 @@
+Estrutura projeto V+
+
+-- Entrar no site como usuário ou como administrador
+-- Administrador pode adicionar hotéis
+-- Usuário encontra esses hotéis que administrador colocou
+
+
+-- CSS cadastro

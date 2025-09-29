@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .div_top_main {
+    background-color: #00b2ff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .div_top_main h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  #div_top_info {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  #opcoes_hoteis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #opcoes_hoteis label {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  #opcoes_hoteis select,
+  #opcoes_hoteis input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  #botao_enviar {
+    background-color: #00b2ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #botao_enviar:hover {
+    background-color: #008ed6;
+  }
+  
+  .hotelinfo {
+    background-color: white;
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    display: none;
+  }
+  
+  .texto {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .hotelinfo p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .botao_comprar {
+    margin-top: 10px;
+    background-color: #00b2ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao_comprar:hover {
+    background-color: #008ed6;
+  }
+  
+  a {
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    color: #00b2ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+      

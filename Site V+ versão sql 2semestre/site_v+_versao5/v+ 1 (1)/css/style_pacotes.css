@@ -1,0 +1,89 @@
+   body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f6f6f6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .pacote-detalhes {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .box h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .voo-info, .hotel-info, .resumo-info {
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    .box img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .btn-amarelo {
+      background-color: #ffcc00;
+      border: none;
+      color: black;
+      padding: 12px;
+      width: 100%;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #f44336;
+      color: white;
+      padding: 2px 6px;
+      font-size: 0.8em;
+      border-radius: 4px;
+    }
+
+
+    .verde {
+      background-color: #4caf50;
+    }
+
+    .data {
+      display: inline-block;
+      background-color: #e0e0e0;
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 4px 0;
+    }
+
+    .hotel-nome {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .preco-final {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #d32f2f;
+    }

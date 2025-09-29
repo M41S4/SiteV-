@@ -1,0 +1,395 @@
+/*CSS DA PÁGINA INICIAL*/
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #ADD8E6;
+  color: #000;
+  font-size: 20px;
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+}
+
+h3 {
+color: #FF4500;
+font-size: 20px;
+}
+
+header {
+background-color: #006AFF;
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav a {
+color: white;
+margin-left: 20px;
+text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #006AFF;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+p {
+margin-top: 3cm;
+}
+
+fieldset {
+text-align: left;
+background-color: aqua;
+width: 80vh;
+height: 70vh;
+border-radius: 30px;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+footer {
+margin: 0%;
+position: fixed-bottom;
+padding: 5%;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ff3131;
+color: white;
+
+
+}
+.pesquisa-container  {
+display: flex;
+justify-content: center;
+margin-top: 40px;
+}
+  
+.pesquisa-container input[type=text] {
+    float: center;
+    padding: 1.25%;
+    border: none;
+    margin-top: 3%;
+    margin-right: 3%;
+    font-size: 17px;
+    border-radius: 55px;
+    border: 1px solid #213bad;
+    padding: 5%;
+    width: 100%;
+}
+
+.pesquisa-container button {
+  position: absolute;
+  right: 5%;
+  top: 45%;
+  bottom: 20%;
+  background-color: #006AFF;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 1.5%;
+  cursor: pointer;
+  font-size: 18px;
+  }
+
+ 
+ .pesquisa-container button:hover {
+  background-color: #0228a3;
+  color: #fff;
+}
+
+.botao-busca {
+position: absolute;
+right: 0.5%;
+top: 2%;
+bottom: 0.5%;
+background: #007BFF;
+border: none;
+border-radius: 50%;
+width: 70px;
+height: 70px;
+color: white;
+font-size: 18px;
+cursor: pointer;
+}
+.botao-busca img {
+  height: 35px;
+  right: 100px;
+}
+  .container {
+    position: relative;
+    text-align: center;
+
+}
+
+  .container-box {
+   background-color: #007BFF;
+   padding: 10%;
+    
+}
+  
+  .left {
+    width: 40%;
+}
+
+  .left h2 {
+    text-align: left;
+    font-size: 40px;
+    margin-right: 1%;
+    right:20%;
+    direction: rtl;
+    color: #ffffff;   
+    left: 1%; 
+    width: 100%; 
+    line-height: 1.5;
+ }
+
+  .solicitar {
+    float: right;
+    margin-right: 1%; 
+    top: 50%;
+    bottom: 50%;
+    direction: rtl;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+        
+ }
+  .solicitar button {
+    background-color: #00b2ff;
+    padding: 15%;
+    width: 500px;
+    border-style: none;
+    border-radius: 70px;
+    margin: 0;
+    top: 50%;
+
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);      
+ }
+
+
+  .solicitar a {
+    color: #ffffff;    
+    font-size: 45px;  
+    bottom:15%;
+    text-decoration: none;      
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+}
+
+.centered {
+  position: absolute;
+  top: 24%;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.superior_esquerda {
+background-color: green;
+border: 5px solid white;
+height: 300px;
+width: 600px;
+position: fixed;
+top: 0px;
+left: 0px;
+}
+
+.superior_direita {
+background-color: blue;
+border: 5px solid white;
+height: 300px;
+width: 300px;
+position: fixed;
+top: 20px;
+right: 10px;
+}
+
+
+
+
+
+.pacotes-container {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+margin-top: 30px;
+padding: 20px;
+}
+
+.pacote {
+background-color: #ffffff;
+color: black;
+width: 250px;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+text-align: center;
+text-decoration: none;
+padding-bottom: 20px;
+transition: transform 0.3s ease;
+}
+
+.pacote:hover {
+transform: scale(1.05);
+}
+
+.pacote img {
+width: 100%;
+height: 170px;
+object-fit: cover;
+border-bottom: 1px solid #ccc;
+}
+
+.pacote h3 {
+font-size: 24px;
+margin: 10px 0 5px;
+color: black;
+}
+
+.pacote p {
+margin: 5px 0;
+font-size: 18px;
+color: black;
+}
+
+.logo {
+height: 60px;
+}
+
+
+.busca-container {
+position: relative;
+max-width: 500px;
+margin: 0 auto;
+}
+
+.busca-container input {
+width: 100%;
+padding: 15px 50px 15px 20px;
+border-radius: 50px;
+border: none;
+font-size: 16px;
+}
+
+
+
+.pacotes {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+padding: 30px;
+}
+
+.pacote {
+width: 200px;
+background: #f0f0f0;
+border-radius: 10px;
+text-align: center;
+padding: 10px;
+position: relative;
+}
+
+.pacote img {
+width: 100%;
+height: 120px;
+object-fit: cover;
+border-radius: 5px;
+}
+
+.pacote .titulo {
+position: absolute;
+top: -10px;
+left: 0;
+right: 0;
+background: red;
+color: white;
+padding: 5px 0;
+font-weight: bold;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+.pacote p {
+margin: 10px 0;
+}
+
+
+
+.seta {
+background: #00BCD4;
+color: white;
+border: none;
+padding: 10px;
+border-radius: 5px;
+font-size: 18px;
+cursor: pointer;
+}
+
+.seta.vermelha {
+background: #f44336;
+}
+
+
+.botao-fixo {
+position: fixed;
+bottom: 20px;
+left: 0;
+width: 100%;
+text-align: center;
+z-index: 1000;
+}
+#border_form{
+  width: 80vh;
+  height: 70vh;
+  border-radius: 30px;
+  border-color: blueviolet;
+}
+#main{
+  width: 100vh;
+  height: 90vh;
+  align-content: center;
+  justify-items:center; 
+  align-self: center;
+}
+#form{
+  width: 80vh;
+  height: 68vh;
+  align-content: center;
+  justify-content: center;
+  position:absolute;
+  padding-left:28vh;
+}
+

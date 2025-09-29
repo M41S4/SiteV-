@@ -1,0 +1,59 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario_id']) || !isset($_SESSION['is_admin'])) {
+    header("Location: ../login.php");
+    exit;
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Novo Hotel</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: 40px auto; }
+        form { display: flex; flex-direction: column; gap: 10px; }
+        label { font-weight: bold; margin-top: 10px;}
+        input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px; background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 4px; margin-top: 20px;}
+        .link-voltar { display: block; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Adicionar Novo Hotel</h1>
+
+    <form action="salvar_hotel.php" method="post">
+        
+        <label for="nome">Nome do Hotel:</label>
+        <input type="text" id="nome" name="nome_hotel" required>
+
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" name="cnpj_hotel">
+
+        <label for="endereco">Endereço (Rua/Av.):</label>
+        <input type="text" id="endereco" name="endereco_hotel">
+
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero_hotel">
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade_hotel" required>
+        
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado_hotel">
+
+        <label for="quartos">Quantidade Total de Quartos:</label>
+        <input type="number" id="quartos" name="quartos_hotel" required>
+
+        <label for="preco">Preço da Diária (R$):</label>
+        <input type="number" step="0.01" id="preco" name="preco_hotel" required>
+
+        <button type="submit">Salvar Novo Hotel</button>
+    </form>
+
+    <a href="listar_hoteis.php" class="link-voltar">Voltar para a lista</a>
+</body>
+</html>

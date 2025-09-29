@@ -1,0 +1,104 @@
+/* === Estilo único para tela de Login === */
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* azul degradê */
+}
+
+/* Container do formulário */
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Formulário */
+#form {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 128, 0, 0.7); /* sombra verde */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Título */
+legend {
+    text-align: center;
+    font-size: 1.5em;
+    color: #2193b0;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+    color: #333;
+}
+
+/* Campos */
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* agora acompanha o tamanho do formulário */
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #2193b0;
+    outline: none;
+    box-shadow: 0 0 6px rgba(33, 147, 176, 0.5);
+}
+
+/* Botão de enviar */
+button,
+a.btn-link {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Botão principal */
+button {
+    background: #ff3131;
+    color: #fff;
+}
+button:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+/* Link "cadastre-se" estilizado como botão */
+a.btn-link {
+    background: #2193b0;
+    color: #fff;
+    margin-top: 10px;
+}
+a.btn-link:hover {
+    background: #176e80;
+    transform: scale(1.05);
+}

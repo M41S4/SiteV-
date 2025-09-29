@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/style_passagens.css">
+  <title>Passagens Aéreas</title>
+</head>
+<body>
+
+  <div class="topo">
+    <h1>Passagens aéreas</h1>
+    <form id="opcoes_passagens">
+      <label for="destinos_value">Destino:</label>
+      <select name="destinos" id="destinos_value">
+        <option value="bahia">Bahia</option>
+        <option value="santa catarina">Santa Catarina</option>
+        <option value="parana">Paraná</option>
+        <option value="rio de janeiro">Rio de Janeiro</option>
+      </select>
+
+      <label for="CheckIn_Function">Ida</label>
+      <input type="date" class="filtro" id="CheckIn_Function" placeholder="Data de entrada" />
+
+      <label for="CheckOut_Function">Volta</label>
+      <input type="date" class="filtro" id="CheckOut_Function" placeholder="Data de saída" />
+
+      <label for="quantidade_pessoas">Pessoas:</label>
+      <input type="number" class="filtro" id="quantidade_pessoas" placeholder="Ex: 2" min="1" />
+
+      <button type="submit" id="botao_enviar">Buscar</button>
+    </form>
+  </div>
+
+  <div class="container">
+
+
+    <div class="card" id="card-bahia">
+      <div class="infos">
+        <img src="assets/latam.png" class="logo" alt="Latam Logo">
+        <p class="ida">ida: 17h30 -------- 20h35</p>
+        <p class="volta">volta: 17h30 -------- 20h35</p>
+        <p>São Paulo para Salvador</p>
+      </div>
+      <div class="preco">
+        <span>800 R$</span>
+        <button class="botao" onclick="comprar()">COMPRAR</button>
+      </div>
+    </div>
+
+    <div class="card" id="card-sc">
+      <div class="infos">
+        <img src="assets/gol.png" class="logo" alt="Gol Logo">
+        <p class="ida">ida: 12h30 -------- 12h45</p>
+        <p class="volta">volta: 18h45 -------- 19h50</p>
+        <p>São Paulo para Santa Catarina</p>
+      </div>
+      <div class="preco">
+        <span>600 R$</span>
+        <button class="botao" onclick="comprar()">COMPRAR</button>
+      </div>
+    </div>
+
+
+    <div class="card" id="card-pr">
+      <div class="infos">
+        <img src="assets/azul.png" class="logo" alt="Azul Logo">
+        <p class="ida">ida: 10h00 -------- 11h10</p>
+        <p class="volta">volta: 16h00 -------- 17h15</p>
+        <p>São Paulo para Curitiba</p>
+      </div>
+      <div class="preco">
+        <span>700 R$</span>
+        <button class="botao" onclick="comprar()">COMPRAR</button>
+      </div>
+    </div>
+
+
+    <div class="card" id="card-rj">
+      <div class="infos">
+        <img src="assets/latam.png" class="logo" alt="Latam Logo">
+        <p class="ida">ida: 08h30 -------- 09h45</p>
+        <p class="volta">volta: 19h00 -------- 20h15</p>
+        <p>São Paulo para Rio de Janeiro</p>
+      </div>
+      <div class="preco">
+        <span>550 R$</span>
+        <button class="botao" onclick="comprar()">COMPRAR</button>
+      </div>
+    </div>
+
+  </div>
+
+  <a class="voltar" href="index.html">Voltar</a>
+
+  <script>
+    function comprar() {
+      window.location.href = 'finalizando.html';
+    }
+
+    document.getElementById("opcoes_passagens").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const destino = document.getElementById("destinos_value").value;
+      const checkIn = document.getElementById("CheckIn_Function").value;
+      const checkOut = document.getElementById("CheckOut_Function").value;
+      const pessoas = parseInt(document.getElementById("quantidade_pessoas").value);
+
+
+      document.querySelectorAll(".card").forEach(card => {
+        card.style.display = "none";
+      });
+
+
+      const dados = {
+        "bahia": { checkIn: "2025-04-20", checkOut: "2025-04-25", maxPessoas: 4, cardId: "card-bahia" },
+        "santa catarina": { checkIn: "2025-04-15", checkOut: "2025-04-20", maxPessoas: 3, cardId: "card-sc" },
+        "parana": { checkIn: "2025-04-10", checkOut: "2025-04-15", maxPessoas: 2, cardId: "card-pr" },
+        "rio de janeiro": { checkIn: "2025-04-18", checkOut: "2025-04-23", maxPessoas: 5, cardId: "card-rj" }
+      };
+
+      const info = dados[destino];
+
+      if (
+        info &&
+        checkIn === info.checkIn &&
+        checkOut === info.checkOut &&
+        pessoas > 0 &&
+        pessoas <= info.maxPessoas
+      ) {
+        document.getElementById(info.cardId).style.display = "flex";
+      } else {
+        alert("Nenhuma passagem encontrada com essas informações.");
+      }
+    });
+  </script>
+
+</body>
+</html>

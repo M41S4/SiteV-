@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Topo */
+.topo {
+  background-color: #00b2ff;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.topo h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+/* Formulário */
+#opcoes_passagens {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+#opcoes_passagens label {
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#opcoes_passagens select,
+#opcoes_passagens input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 200px;
+}
+
+#botao_enviar {
+  background-color: #00b2ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#botao_enviar:hover {
+  background-color: #008ed6;
+}
+
+/* Cards de passagens */
+.container {
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 700px;
+
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.infos {
+  flex: 1;
+  min-width: 250px;
+}
+
+.infos p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.infos .ida, .infos .volta {
+  font-weight: bold;
+  color: #333;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.preco {
+  text-align: right;
+  min-width: 150px;
+}
+
+.preco span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00b2ff;
+}
+
+/* Botão comprar */
+.botao {
+  background-color: #00b2ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #008ed6;
+}
+
+/* Link voltar */
+a.voltar {
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+  text-decoration: none;
+  font-weight: bold;
+  color: #00b2ff;
+}
+
+a.voltar:hover {
+  text-decoration: underline;
+}

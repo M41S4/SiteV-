@@ -1,0 +1,134 @@
+		<!DOCTYPE html>
+		<html lang="pt-br">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>V+ Viagens</title>
+			<link rel="stylesheet" href="../css/style_index.css">
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+		</head>
+		<body>
+
+			<header>
+				<img src="../assets/logo.png" alt="Logo V+" class="logo">
+				<nav>
+					<ul>
+					<li><a href="passagens.html">Passagens</a></li>
+					<li><a href="hoteis.html">Hotéis</a></li>
+					<li><a href="../login.php">Login</a></li>
+					<li><a href="#"><i class="fa fa-user-circle"></i></a></li>
+					<li><a href="#"><i class="fa fa-bars"></i></a></li>                
+					</ul>
+
+				</nav>
+			</header>
+
+
+			<div class="container" id="bg">
+				<img src="../assets/bg.jpg"  style="width:100%;">
+				<div class="centered"><h1>Qual será sua próxima viagem?</h1><br>
+				<form name="frm_pesquisa" role="search">
+					<div class="pesquisa-container">
+					<input type="text" name="q" id="busca" placeholder="Digite seu destino">
+					<!--<button class="botao-busca"><img src="assets/icons/search.png" alt="" srcset=""></a></i></button> --!>       
+					</div>
+					<ul id="sugestoes" class="sugestoes-lista"></ul>
+						</form>
+		  
+					   
+			</div>  
+			<div class="pacotes">
+				 <a href="plano_pacote_bahia.html" class="pacote">
+					<div class="titulo">Bahia</div>
+					<img src="../assets/bahia.jpg" alt="Bahia">
+					<p>Porto Seguro, Ilhéus, Salvador</p>
+					<p class="preco">12x de <strong>R$ 200</strong></p>
+				</a>
+
+				<a href="plano_pacote_santaCatarina.html" class="pacote">
+					<div class="titulo">Santa Catarina</div>
+					<img src="../assets/santacatarina.jpeg" alt="Santa Catarina">
+					<p>Balneário Camboriú e Florianópolis</p>
+					<p class="preco">12x de <strong>R$ 250</strong></p>
+				</a>
+
+				<a href="plano_pacote_rioDeJaneiro.html" class="pacote">
+					<div class="titulo">Rio de Janeiro</div>
+					<img src="../assets/rj.jpg" alt="Rio de Janeiro">
+					<p>Rio de Janeiro e Arraial do Cabo</p>
+					<p class="preco">12x de <strong>R$ 250</strong></p>
+				</a>
+
+				<a href="plano_pacote_parana.html" class="pacote">
+					<div class="titulo">Paraná</div>
+					<img src="../assets/pr.jpg" alt="Paraná">
+					<p>Foz do Iguaçu</p>
+					<p class="preco">12x de <strong>R$ 200</strong></p>
+				</a>
+			</div>
+			</div>
+
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<div class="container-box">
+			<div class="left"><h2> Nós oferecemos a melhor experiência para sua viagem</h2></div>
+			<div class="solicitar"><button type="button"><a href="solicitar_roteiros.html">Solicitar Roteiro</a></button></div>       
+			  
+		</div>
+		   <footer>
+			<p>Sobre nós<br>
+		Rua Rita Lima do Vale Nogueira, 22, Mauá,09371-540 CEP  
+		(11) 2337-8355</p>
+		</footer>
+
+		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+		<div class="botao-fixo">
+			
+		</div>
+
+
+		<script>
+			const destinos = [
+				"Bahia", "Porto Seguro", "Ilhéus", "Salvador",
+				"Santa Catarina", "Balneário Camboriú", "Florianópolis",
+				"Rio de Janeiro", "Arraial do Cabo",
+				"Paraná", "Foz do Iguaçu"
+			];
+
+			const inputBusca = document.getElementById("busca");
+			const sugestoes = document.getElementById("sugestoes");
+
+			inputBusca.addEventListener("input", () => {
+				const valor = inputBusca.value.toLowerCase();
+				sugestoes.innerHTML = "";
+
+				if (valor.length === 0) return;
+
+				const filtrados = destinos.filter(destino =>
+					destino.toLowerCase().includes(valor)
+				);
+
+				filtrados.forEach(destino => {
+					const li = document.createElement("li");
+					li.textContent = destino;
+					li.addEventListener("click", () => {
+						inputBusca.value = destino;
+						sugestoes.innerHTML = "";
+					});
+					sugestoes.appendChild(li);
+				});
+			});
+
+			document.addEventListener("click", (e) => {
+				if (!e.target.closest(".busca-container")) {
+					sugestoes.innerHTML = "";
+				}
+			});
+		</script>
+		</body>
+		</html>
